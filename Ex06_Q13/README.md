@@ -16,8 +16,10 @@
 
 # 참고링크 및 코드 개선 여부 
 ----------
-1. 코드 블럭이 잘 구분되어 있고, 코드가 순차적으로 구성되어 있어 구조를 파악하기 쉬었습니다.
-'''
+### 1. 코드 블럭이 잘 구분되어 있고, 코드가 순차적으로 구성되어 있어 구조를 파악하기 쉬었습니다.
+
+'''  
+  
 #sticker location : nose
 for dlib_rect, landmark in zip(dlib_rects, list_landmarks):
     x = landmark[30][0]
@@ -25,14 +27,7 @@ for dlib_rect, landmark in zip(dlib_rects, list_landmarks):
     w = h = dlib_rect.width()
     w_sticker = w-w//5
     h_sticker = h-h//5
-    img_sticker = cv2.resize(img_sticker, (w_sticker,h_sticker))
-    print (f'nose(x,y) : ({x},{y})')
-    print (f'dlib_rect(w,h) : ({w},{h})')
-    print (f'sticker_size(w,h) : ({len(img_sticker[0])},{len(img_sticker[1])})')
-
-    refined_x = x - w_sticker//2
-    refined_y = y - h_sticker//2
-
+    ....
     #crop minus location
     if refined_x < 0: 
         img_sticker = img_sticker[:, -refined_x:]
@@ -42,7 +37,7 @@ for dlib_rect, landmark in zip(dlib_rects, list_landmarks):
         img_sticker = img_sticker[-refined_y:, :]
         refined_y = 0
     print (f'sticker_crop(x,y) : ({refined_x},{refined_y})')
-    
+    ....
     ###transparency control### > same as addWeighted()
     sticker_transparency = 0.7
     #remove img's alpha channel in sticker_area
@@ -60,6 +55,7 @@ for dlib_rect, landmark in zip(dlib_rects, list_landmarks):
     plt.figure(figsize=(10,10))
     plt.imshow(cv2.cvtColor(img_show, cv2.COLOR_BGRA2RGBA))
     plt.show()
+
 '''
   1. x, y 좌표 및 w, h 값을 설정
   2. 스티커의 크기를 조정
