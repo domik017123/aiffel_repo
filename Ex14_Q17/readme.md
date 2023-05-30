@@ -5,10 +5,10 @@
 
 # PRT(PeerReviewTemplate)
 각 항목을 스스로 확인하고 토의하여 작성한 코드에 적용합니다.
-- [O] 1.코드가 정상적으로 동작하고 주어진 문제를 해결했나요?
+- [O] 1.코드가 정상적으로 동작하고 주어진 문제를 해결했나요?  
 네, 모든 코드가 정상적으로 동작합니다.  
-- 주어진 문제였던 `Augmentation 방법 3가지 (resize, cropping, mirroring)`를 활용해 데이터 증강을 수행했습니다.  
-- U-Net을 class를 활용해 구현하고 그래프로 잘 표현했습니다. `Skip connection 구현` 부분을 첨부합니다.
+    - 주어진 문제였던 `Augmentation 방법 3가지 (resize, cropping, mirroring)`를 활용해 데이터 증강을 수행했습니다.  
+    - U-Net을 class를 활용해 구현하고 그래프로 잘 표현했습니다. `Skip connection 구현` 부분을 첨부합니다.
 
 ```Python
 class UNetGenerator(Model):
@@ -65,8 +65,8 @@ UNetGenerator().get_plot()
 - Segments, real_image, predicted image를 잘 비교했습니다. 
 - generator와 discriminator 각각 loss의 변화를 그래프로 출력했습니다.  
 
-- [O] 2.주석을 보고 작성자의 코드가 이해되었나요?
-- 네, markdown으로 각 단계를 잘 구분하였고, 특히 구현이 어려웠던 `학습 단계별 가중치 업데이트` 과정의 주석이 이해를 도왔습니다.
+- [O] 2.주석을 보고 작성자의 코드가 이해되었나요?  
+  - 네, markdown으로 각 단계를 잘 구분하였고, 특히 구현이 어려웠던 `학습 단계별 가중치 업데이트` 과정의 주석이 이해를 도왔습니다.
 ```Python
 def train_step(input_image, real_image):
     with tf.GradientTape() as gene_tape, tf.GradientTape() as disc_tape:
@@ -92,10 +92,10 @@ def train_step(input_image, real_image):
 - [X] 3.코드가 에러를 유발할 가능성이 있나요?
 
 - [O] 4.코드 작성자가 코드를 제대로 이해하고 작성했나요?
-- 네, 구분이 크게 필요하지 않은 부분은 공백을 최대한 줄이되 구분이 필요한 부분은 공백을 잘 활용했습니다. 
+  - 네, 구분이 크게 필요하지 않은 부분은 공백을 최대한 줄이되 구분이 필요한 부분은 공백을 잘 활용했습니다. 
 
 - [O] 5.코드가 간결한가요?
-- 네, 실행할 코드 블록이 총 18개로 많지 않습니다. 
+  - 네, 실행할 코드 블록이 총 18개로 많지 않습니다. 
 
 # 참고 링크 및 코드 개선
 (PEP) `함수 정의`와 `실행`을 같은 코드블럭에서 할 경우 함수 정의 후 `Enter 2번 입력` 후 실행합니다.
