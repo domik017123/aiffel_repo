@@ -85,7 +85,6 @@ def create_model():
     return model
 ```
 
-<br> 위에 작성한 코드처럼 함수 내에 예외처리를 깔끔하게 해놓았기 때문에 오류가 일어날 여지는 보이지 않습니다.
 
 ### 코드 작성자가 코드를 제대로 이해하고 작성했나요? (O)
 ![image](https://github.com/domik017123/aiffel_repo/assets/65104209/5e3cf088-3d75-4bf6-81f6-f24156f88f29)
