@@ -139,5 +139,5 @@
   ```
   - 네.
   - 특히 결과를 표시하는 부분이 인상깊었는데, 이 부분을 반복문을 사용해서 간결하게 표현해주셨습니다.
-  - ![image](https://github.com/201710808/aiffel_repo/assets/79844211/5e5d1434-31ed-44c7-be49-18bb9afabab3)
+![image](https://github.com/201710808/aiffel_repo/assets/79844211/5e5d1434-31ed-44c7-be49-18bb9afabab3)
 
